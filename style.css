@@ -1,0 +1,40 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(200, 200, 100, 0.5), rgba(255, 250, 50));
+}
+
+.output {
+  height: 100px;
+  width: 300px;
+  border: red solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  padding: 0;
+}
+
+.button-div {
+  margin-top: 20px;
+}
+
+.button-div > button {
+  margin: 0px 10px;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+
+
