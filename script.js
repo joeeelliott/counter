@@ -3,6 +3,9 @@ const outputNumber = document.querySelector('.output');
 const decreaseBtn = document.querySelector('.decrease');
 const increaseBtn = document.querySelector('.increase');
 const resetBtn = document.querySelector('.reset');
+const increaseByInputBtn = document.querySelector('.increaseByInput');
+const decreaseByInputBtn = document.querySelector('.decreaseByInput');
+const input = document.querySelector('.input');
 
 //add a function for the decrease button functionality 
 function decrease(){
@@ -33,11 +36,27 @@ function colorChange(){
   }
 }
 
+function decreaseByInput(){
+  let currentNumber = document.querySelector('.output').innerHTML; 
+  outputNumber.innerHTML = currentNumber - input.value;
+}
+
+function increaseByInput(){
+  let toNumber = parseInt(outputNumber.innerHTML);
+  outputNumber.innerHTML = toNumber + parseInt(input.value);
+}
+
 // addEventListeners for the buttons
 decreaseBtn.addEventListener('click', decrease);
 increaseBtn.addEventListener('click', increase);
 resetBtn.addEventListener('click', reset);
 
+decreaseByInputBtn.addEventListener('click', decreaseByInput);
+increaseByInputBtn.addEventListener('click', increaseByInput);
+
 decreaseBtn.addEventListener('click', colorChange);
 increaseBtn.addEventListener('click', colorChange);
 resetBtn.addEventListener('click', colorChange);
+
+decreaseByInputBtn.addEventListener('click', colorChange);
+increaseByInputBtn.addEventListener('click', colorChange);
